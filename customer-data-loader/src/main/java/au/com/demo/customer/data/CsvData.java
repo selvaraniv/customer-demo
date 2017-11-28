@@ -4,14 +4,14 @@ public class CsvData {
 
 	private String firstName;
 	private String lastName;
-	private String postCode;
-	private int uniqueId;
+//	private String postCode;
+//	private int uniqueId;
 
 	public CsvData(String firstName, String lastName, String postCode, int uniqueId) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.postCode = postCode;
-		this.uniqueId = uniqueId;
+//		this.postCode = postCode;
+//		this.uniqueId = uniqueId;
 	}
 
 	public String getFirstName() {
@@ -30,20 +30,20 @@ public class CsvData {
 		this.lastName = lastName;
 	}
 
-	public String getPostCode() {
-		return postCode;
-	}
-
-	public void setPostCode(String postCode) {
-		this.postCode = postCode;
-	}
-
-	public int getUniqueId() {
-		return uniqueId;
-	}
-
-	public void setUniqueId(int uniqueId) {
-		this.uniqueId = uniqueId;
-	}
+//	public String getPostCode() {
+//		return postCode;
+//	}
+//
+//	public void setPostCode(String postCode) {
+//		this.postCode = postCode;
+//	}
+//
+//	public int getUniqueId() {
+//		return uniqueId;
+//	}
+//
+//	public void setUniqueId(int uniqueId) {
+//		this.uniqueId = uniqueId;
+//	}
 
 }
