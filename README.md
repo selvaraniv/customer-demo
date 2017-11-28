@@ -34,31 +34,31 @@ Application URLs
 
 1. To retrieve all customer records
 
-HTTP GET
+  HTTP GET
 
-http://localhost:8080/api/v1/customers
+  http://localhost:8080/api/v1/customers
 
 2. To insert data into customer table
 
-HTTP POST
+  HTTP POST
 
-http://localhost:8080/api/v1/customers
+  http://localhost:8080/api/v1/customers
 
-In Request Body:
-```
-[
-  {
-    "firstName": "Jack",
-    "lastName" : "Ma"
-  },
-  {
-    "firstName": "David",
-    "lastName" " "Will"
-   }
- ]
-```
+  In Request Body:
+  ```
+  [
+    {
+      "firstName": "Jack",
+      "lastName" : "Ma"
+    },
+    {
+      "firstName": "David",
+      "lastName" " "Will"
+     }
+   ]
+  ```
 3. To retrieve a customer by last name
 
-HTTP GET
+  HTTP GET
 
-http://localhost:8080/api/v1/customer/Will
+  http://localhost:8080/api/v1/customer/Will
