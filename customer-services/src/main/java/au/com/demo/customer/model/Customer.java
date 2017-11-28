@@ -12,8 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 @Entity
 public class Customer implements Serializable {
 
@@ -29,9 +27,9 @@ public class Customer implements Serializable {
 	@Column(nullable = false)
 	private String lastName;
 
+	// MySQL doesn't like order as the entity name.
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private Set<OrderDetails> orders; // MySQL doesn't like order as the entity
-										// name.
+	private Set<OrderDetails> orderDetails;
 
 	public Customer() {
 	}
@@ -44,8 +42,9 @@ public class Customer implements Serializable {
 	public Customer(String firstName, String lastName, Set<OrderDetails> orders) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.orders = orders;
+		this.orderDetails = orders;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -63,15 +62,15 @@ public class Customer implements Serializable {
 	}
 
 	public Set<OrderDetails> getOrders() {
-		return this.orders;
+		return this.orderDetails;
 	}
 
 	public void setOrders(Set<OrderDetails> orders) {
-		this.orders = orders;
+		this.orderDetails = orders;
 	}
 
 	public void addOrder(OrderDetails order) {
 		getOrders().add(order);
 	}
-	
+
 }

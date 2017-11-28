@@ -27,7 +27,7 @@ public class Application implements CommandLineRunner
 	}
 	
 	/**
-	 * some sample data to being with.
+	 * some sample data to begin with.
 	 */
 	@Override
     @Transactional

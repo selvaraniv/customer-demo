@@ -31,6 +31,7 @@ public class OrderDetails implements Serializable {
 	
 	public OrderDetails(){
 	}
+	
 	public OrderDetails(String name){
 		this.orderName = name;
 	}
