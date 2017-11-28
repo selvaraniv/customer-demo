@@ -53,7 +53,7 @@ Application URLs
 3. To retrieve a customer by last name
 
   HTTP GET
-  http://localhost:8081/api/v1/customer/Will
+  http://localhost:8081/api/v1/customer/Jo
   
 4. To load customer data on customer-services by calling the rest api on customer-data-loader
 
