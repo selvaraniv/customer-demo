@@ -14,7 +14,9 @@ http://localhost:8080/api/v1/customers
 
 # Application 2 - customer-services
 
-A sample spring boot rest and jpa application to read from MySQL and expose JSON REST services.
+A sample spring boot rest and jpa application to read from embedded H2 (default) or MySQL (see add-on below) and expose JSON REST services.
+
+Customer and Order table has one-to-many and many-to-one relationship respectively.
 
 The application creates tables and adds a few sample data.
 
