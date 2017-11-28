@@ -142,6 +142,57 @@ Response:
   HTTP POST
   http://localhost:8081/api/v1/customers/load
   
+  Response (returning ingested data just for testing purposes) and HTTP Status 200 OK
+  ```
+  [
+    {
+        "firstName": "Jack",
+        "lastName": "John",
+        "orderDetails": [
+            {
+                "id": 1,
+                "orderName": "order one"
+            },
+            {
+                "id": 2,
+                "orderName": "order two"
+            }
+        ]
+    },
+    {
+        "firstName": "Jim",
+        "lastName": "Jo",
+        "orderDetails": [
+            {
+                "id": 4,
+                "orderName": "order one"
+            },
+            {
+                "id": 3,
+                "orderName": "order two"
+            }
+        ]
+    },
+    {
+        "firstName": "Jack",
+        "lastName": "Ma",
+        "orderDetails": []
+    },
+    {
+        "firstName": "David",
+        "lastName": "Will",
+        "orderDetails": []
+    },
+    {
+        "firstName": "firstname001",
+        "lastName": "lastname001",
+        "orderDetails": null
+    },
+    ................
+  ]
+  
+  ```
+  
 # To setup customer-services on MySQL (add-on)
 
 To run the application using MySQL uncomment the following files on application.properties
