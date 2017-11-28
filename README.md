@@ -80,9 +80,10 @@ Thoughts: In order to ingest millions of records into the database without compr
  - capture the input file
  - notify customer (or consuming app) of successful capture of input data
  - implement a batch application to ingest the data into the database ensuring performance constraints.
+ - perform some form of reconciliation
  - notify customer (or consuming app) of successful dataload.
 
-*Some basic test peformed with customer-data-loader returning approx 10000 records on the JSON response and ingesting this into H2 DB via the customer-services application in less than 2 seconds.*
+*Some basic test peformed with customer-data-loader returning approx 10000 records (not really large) on the JSON response and ingesting this into H2 DB via the customer-services application in less than 2 seconds.*
 
 ```
 21:04:42.288  INFO 18348 --- [nio-8081-exec-2] a.c.d.c.controller.CustomerController    : loading customers..
