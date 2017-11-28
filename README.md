@@ -58,15 +58,30 @@ Application URLs
 
   http://localhost:8081/api/v1/customer/Will
   
+4. To load customer data on customer-services by calling the rest api on customer-data-loader
+
+  HTTP GET
+  http://localhost:8081/api/v1/customers/load
+ 
+# To setup customer-services on MySQL (add-on)
+
 To run the application using MySQL uncomment the following files on application.properties
 
 ```
 #spring.datasource.url=jdbc:mysql://localhost:3306/customer-demo
-#spring.datasource.username=root
-#spring.datasource.password=root
+#spring.datasource.username=<username>
+#spring.datasource.password=<password>
 ```
-And create a schem:
+And create a schema:
 
 ```
 CREATE SCHEMA customer-demo;
 ```
+# Application 3
+
+Thoughts: In order to ingest millions of records into the database without compromising on performance:
+ - capture the input file
+ - notify customer (or consuming app) of successful capture of input data
+ - implement a batch application to ingest the data into the database ensuring performance constraints.
+ - notify customer (or consuming app) of successful dataload.
+ 
