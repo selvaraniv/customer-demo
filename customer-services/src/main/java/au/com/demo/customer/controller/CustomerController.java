@@ -68,7 +68,7 @@ public class CustomerController {
 		return new ResponseEntity<List<Customer>>(customers, HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/v1/customers/load", method = RequestMethod.GET)
+	@RequestMapping(value = "/v1/customers/load", method = RequestMethod.POST)
 	public ResponseEntity<?> loadCustomers() {
 
 		logger.info("loading customers..");

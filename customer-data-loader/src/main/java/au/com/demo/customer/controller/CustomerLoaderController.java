@@ -21,12 +21,18 @@ public class CustomerLoaderController {
 
 	@RequestMapping(value = "/v1/customers", method = RequestMethod.GET)
 	public ResponseEntity<List<CsvData>> loadAllCustomers() {
-		
-		String FILE_PATH = ".\\custom.csv";
+
+		// contains ~100 odd customer data
+		String FILE_PATH = ".\\customer_data_small.csv";
+
+		// play with a ~10000 records.
+		// String FILE_PATH = ".\\large_dataset.csv";
+
 		CsvReader reader = new CsvReader();
-		List<CsvData> customerDetails = reader.readCsvFile(FILE_PATH); //no null checks performed or exceptions handled for now.
+		// no null checks performed or exceptions handled for now.
+		List<CsvData> customerDetails = reader.readCsvFile(FILE_PATH);
 		if (customerDetails.isEmpty()) {
-			return new ResponseEntity<List<CsvData>> (HttpStatus.NO_CONTENT);
+			return new ResponseEntity<List<CsvData>>(HttpStatus.NO_CONTENT);
 		}
 		return new ResponseEntity<List<CsvData>>(customerDetails, HttpStatus.OK);
 	}
