@@ -16,11 +16,6 @@ http://localhost:8080/api/v1/customers
 
 A sample spring boot rest and jpa application to read from MySQL and expose JSON REST services.
 
-Setup MySQL:
-
-```
-CREATE SCHEMA customer-demo;
-```
 The application creates tables and adds a few sample data.
 
 Change the application.properties with your local datasource.url and MySQL username/password.
@@ -36,13 +31,13 @@ Application URLs
 
   HTTP GET
 
-  http://localhost:8080/api/v1/customers
+  http://localhost:8081/api/v1/customers
 
 2. To insert data into customer table
 
   HTTP POST
 
-  http://localhost:8080/api/v1/customers
+  http://localhost:8081/api/v1/customers
 
   In Request Body:
   ```
@@ -61,4 +56,17 @@ Application URLs
 
   HTTP GET
 
-  http://localhost:8080/api/v1/customer/Will
+  http://localhost:8081/api/v1/customer/Will
+  
+To run the application using MySQL uncomment the following files on application.properties
+
+```
+#spring.datasource.url=jdbc:mysql://localhost:3306/customer-demo
+#spring.datasource.username=root
+#spring.datasource.password=root
+```
+And create a schem:
+
+```
+CREATE SCHEMA customer-demo;
+```
