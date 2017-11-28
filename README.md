@@ -9,8 +9,34 @@ mvn clean install spring-boot:run
 ```
 
 HTTP GET
-
 http://localhost:8080/api/v1/customers
+
+Response:
+```
+[
+    {
+        "firstName": "firstname001",
+        "lastName": "lastname001"
+    },
+    {
+        "firstName": "firstname002",
+        "lastName": "lastname002"
+    },
+    {
+        "firstName": "firstname003",
+        "lastName": "lastname003"
+    },
+    {
+        "firstName": "firstname004",
+        "lastName": "lastname004"
+    },
+    {
+        "firstName": "firstname005",
+        "lastName": "lastname005"
+    },
+    .........
+    ]
+```
 
 # Application 2 - customer-services
 
@@ -31,6 +57,40 @@ Application URLs
 
   HTTP GET
   http://localhost:8081/api/v1/customers
+
+Response:
+```
+[
+    {
+        "firstName": "Jack",
+        "lastName": "John",
+        "orderDetails": [
+            {
+                "id": 2,
+                "orderName": "order two"
+            },
+            {
+                "id": 1,
+                "orderName": "order one"
+            }
+        ]
+    },
+    {
+        "firstName": "Jim",
+        "lastName": "Jo",
+        "orderDetails": [
+            {
+                "id": 4,
+                "orderName": "order one"
+            },
+            {
+                "id": 3,
+                "orderName": "order two"
+            }
+        ]
+    }
+  ]
+```
 
 2. To insert data into customer table
 
@@ -55,11 +115,31 @@ Application URLs
   HTTP GET
   http://localhost:8081/api/v1/customer/Jo
   
+  Response:
+  ```
+  [
+    {
+        "firstName": "Jim",
+        "lastName": "Jo",
+        "orderDetails": [
+            {
+                "id": 3,
+                "orderName": "order two"
+            },
+            {
+                "id": 4,
+                "orderName": "order one"
+            }
+        ]
+    }
+  ]
+```
+  
 4. To load customer data on customer-services by calling the rest api on customer-data-loader
 
   HTTP POST
   http://localhost:8081/api/v1/customers/load
- 
+  
 # To setup customer-services on MySQL (add-on)
 
 To run the application using MySQL uncomment the following files on application.properties
