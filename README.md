@@ -1,4 +1,4 @@
-#Application 1 - customer-data-loader
+# Application 1 - customer-data-loader
 
 A sample spring boot application that reads customer data from a csv file and provides a json response.
 
@@ -8,7 +8,7 @@ HTTP GET
 
 http://localhost:8080/api/v1/customers
 
-#Application 2 - customer-services
+# Application 2 - customer-services
 
 A sample spring boot rest and jpa application to read from MySQL and expose JSON REST services.
 
