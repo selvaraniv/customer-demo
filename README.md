@@ -20,8 +20,6 @@ Customer and Order table has one-to-many and many-to-one relationship respective
 
 The application creates tables and adds a few sample data.
 
-Change the application.properties with your local datasource.url and MySQL username/password.
-
 To run:
 ```
 mvn clean install spring-boot:run
@@ -62,7 +60,7 @@ Application URLs
   
 4. To load customer data on customer-services by calling the rest api on customer-data-loader
 
-  HTTP GET
+  HTTP POST
   http://localhost:8081/api/v1/customers/load
  
 # To setup customer-services on MySQL (add-on)
