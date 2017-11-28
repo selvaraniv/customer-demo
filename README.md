@@ -30,13 +30,11 @@ Application URLs
 1. To retrieve all customer records
 
   HTTP GET
-
   http://localhost:8081/api/v1/customers
 
 2. To insert data into customer table
 
   HTTP POST
-
   http://localhost:8081/api/v1/customers
 
   In Request Body:
@@ -55,7 +53,6 @@ Application URLs
 3. To retrieve a customer by last name
 
   HTTP GET
-
   http://localhost:8081/api/v1/customer/Will
   
 4. To load customer data on customer-services by calling the rest api on customer-data-loader
