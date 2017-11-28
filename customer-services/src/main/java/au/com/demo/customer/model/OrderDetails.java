@@ -45,6 +45,20 @@ public class OrderDetails implements Serializable {
 	public Customer getCustomer(){
 		return this.customer;
 	}
-	
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getOrderName() {
+		return orderName;
+	}
+
+	public void setOrderName(String orderName) {
+		this.orderName = orderName;
+	}
 }

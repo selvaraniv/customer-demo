@@ -10,6 +10,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -29,6 +31,7 @@ public class Customer implements Serializable {
 
 	// MySQL doesn't like order as the entity name.
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinTable(name = "customer_order", joinColumns = @JoinColumn(name = "customer_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "orderDetails_id", referencedColumnName = "id"))
 	private Set<OrderDetails> orderDetails;
 
 	public Customer() {
@@ -61,16 +64,16 @@ public class Customer implements Serializable {
 		return this.lastName;
 	}
 
-	public Set<OrderDetails> getOrders() {
+	public Set<OrderDetails> getOrderDetails() {
 		return this.orderDetails;
 	}
 
-	public void setOrders(Set<OrderDetails> orders) {
-		this.orderDetails = orders;
+	public void setOrderDetails(Set<OrderDetails> orderDetails) {
+		this.orderDetails = orderDetails;
 	}
 
 	public void addOrder(OrderDetails order) {
-		getOrders().add(order);
+		getOrderDetails().add(order);
 	}
 
 }

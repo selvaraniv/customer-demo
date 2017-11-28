@@ -29,7 +29,7 @@ import au.com.demo.customer.service.CustomerService;
 @RequestMapping("/api")
 public class CustomerController {
 
-	public static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
+	private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 
 	@Autowired
 	CustomerService customerService;
