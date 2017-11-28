@@ -4,6 +4,10 @@ A sample spring boot application that reads customer data from a csv file and pr
 
 To run:
 
+```
+mvn clean install spring-boot:run
+```
+
 HTTP GET
 
 http://localhost:8080/api/v1/customers
