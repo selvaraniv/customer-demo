@@ -207,6 +207,8 @@ And create a schema:
 ```
 CREATE SCHEMA customer-demo;
 ```
+The tables and sample data are created from the application.
+
 # Application 3
 
 Thoughts: In order to ingest millions of records into the database without compromising on performance:
