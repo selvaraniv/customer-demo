@@ -110,6 +110,8 @@ Response:
      }
    ]
   ```
+  Response: HTTP Status 201 Created.
+  
 3. To retrieve a customer by last name
 
   HTTP GET
